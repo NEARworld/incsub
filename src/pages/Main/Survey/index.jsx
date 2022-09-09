@@ -1,19 +1,15 @@
-import CancelButton from '../../../components/buttons/CancelButton';
 import '../../../styles/survey.scss';
+import Header from './Header/index';
 
 function Survey({ survey, modal }) {
   const { setIsModalOpen } = modal;
   const { setIsSurveyOpen } = survey;
   return (
     <div className="survey-container">
-      <header className="survey-header">
-        <CancelButton
-          customClass="survey-btn-cancel"
-          triggers={{ setIsModalOpen, setIsSurveyOpen }}
-        />
-        <span className="survey-header-text">Cancellation Survey</span>
-        <hr className="survey-header-hr" />
-      </header>
+      <Header
+        setIsModalOpen={setIsModalOpen}
+        setIsSurveyOpen={setIsSurveyOpen}
+      />
       <section className="survey-body">
         <div className="survey-title">
           <h1 className="survey-title-main">We're sad to see you go...</h1>
