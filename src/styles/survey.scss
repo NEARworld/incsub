@@ -3,7 +3,6 @@
 .survey-container {
   width: 1050px;
   margin: 45px auto auto auto;
-
   .survey-header {
     .survey-btn-cancel {
       width: 25px;
@@ -21,25 +20,36 @@
       border-top: 1px solid #e6e6e6;
     }
   }
-  .survey-body {
-    margin-top: 30px;
-    padding-top: 60px;
+  .survey-wrapper {
     background-color: white;
-    border-radius: 10px;
+    padding: 0 160px;
 
-    .survey-title {
-      margin: 0 auto;
-      text-align: center;
+    .survey-body {
+      margin-top: 30px;
+      padding-top: 60px;
+      border-radius: 10px;
 
-      .survey-title-main {
-        font-weight: global.$weight-thick;
-        font-size: 24px;
-        line-height: 30px;
-        letter-spacing: 0.26px;
+      .survey-title {
+        margin: 0 auto;
+        text-align: center;
+
+        .survey-title-main {
+          font-weight: global.$weight-thick;
+          font-size: 24px;
+          line-height: 30px;
+          letter-spacing: 0.26px;
+        }
+        .survey-title-sub {
+          color: global.$color-secondary;
+          font-size: 15px;
+        }
       }
-      .survey-title-sub {
-        color: global.$color-secondary;
-        font-size: 15px;
+    }
+    footer {
+      .survey-control {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        text-align: right;
       }
     }
   }

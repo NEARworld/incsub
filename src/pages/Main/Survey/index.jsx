@@ -12,8 +12,10 @@ function Survey({ survey, modal }) {
         setIsModalOpen={setIsModalOpen}
         setIsSurveyOpen={setIsSurveyOpen}
       />
-      <Body />
-      <Footer />
+      <div className="survey-wrapper">
+        <Body />
+        <Footer />
+      </div>
     </div>
   );
 }
