@@ -21,7 +21,10 @@ function Reasons() {
               name="reason"
               value={item.data}
               id={item.id}
-              onChange={() => setChecked(item.id)}
+              onClick={() => {
+                checked === item.id ? setChecked(0) : setChecked(item.id);
+              }}
+              checked={checked === item.id ? true : false}
             />
             <span className="checkmark"></span>
             <span className="reason-text">{item.data}</span>
