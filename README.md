@@ -3,11 +3,17 @@
 ### Title
 
 **Cancellation Survey**
-___
+
+---
+
 ### Developer
+
 #### NEARworld
+
 #### email: artemismars2@outlook.com
-___
+
+---
+
 ### How to run the project quickly
 
 #### copy and paste the following command in the terminal
@@ -15,7 +21,9 @@ ___
 ```
 git clone https://github.com/NEARworld/incsub.git && cd ./incsub && npm install && npm run build && npm run dev
 ```
-___
+
+---
+
 ### Node_modules
 
 #### React
@@ -44,3 +52,10 @@ ___
 | @babel/runtime                    | 7.18.9   |
 | babel-eslint                      | ^10.1.0  |
 | babel-loader                      | ^8.2.5   |
+
+#### Eslint
+
+| module              | version |
+| ------------------- | ------- |
+| eslint              | ^8.23.0 |
+| eslint-plugin-react | ^7.31.7 |
