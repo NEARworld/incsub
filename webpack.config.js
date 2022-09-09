@@ -5,7 +5,7 @@ module.exports = {
   entry: './index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'public'),
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
