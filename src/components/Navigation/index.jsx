@@ -1,5 +1,7 @@
+import '../../styles/nagivation.scss';
+
 function Navigation() {
-  return <div>Navigation</div>;
+  return <div className="navigation-wrapper">Navigation</div>;
 }
 
 export default Navigation;
