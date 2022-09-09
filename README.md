@@ -4,6 +4,10 @@
 
 **Cancellation Survey**
 
+### Developer
+#### NEARworld
+#### email: artemismars2@outlook.com
+
 ### How to run the project quickly
 
 #### copy and paste the following command in the terminal
