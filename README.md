@@ -10,7 +10,9 @@
 
 #### NEARworld
 
-#### email: artemismars2@outlook.com
+#### Email: artemismars2@outlook.com
+
+#### Project URL: https://grand-capybara-7c2aa0.netlify.app/
 
 ---
 
