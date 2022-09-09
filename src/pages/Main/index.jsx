@@ -4,13 +4,17 @@ import Survey from './Survey';
 import '../../styles/main.scss';
 
 function Main() {
-  const [openSurvey, setOpenSurvey] = useState(false);
+  const [isSurveyOpen, setIsSurveyOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   return (
     <div className="main-wrapper">
-      {!openSurvey ? (
-        <Modal openSurvey={openSurvey} setOpenSurvey={setOpenSurvey} />
+      {!isSurveyOpen ? (
+        <Modal
+          modal={{ isModalOpen, setIsModalOpen }}
+          survey={{ setIsSurveyOpen }}
+        />
       ) : (
-        <Survey />
+        <Survey survey={{ setIsSurveyOpen }} modal={{ setIsModalOpen }} />
       )}
     </div>
   );

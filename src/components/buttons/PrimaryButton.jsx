@@ -1,14 +1,7 @@
-function PrimaryButton({ parent, triggers, customClass, text }) {
-  function handleClick() {
-    triggers.setOpenSurvey(true);
-    if ('modal' === parent) {
-      triggers.setIsOpen(false);
-    }
-  }
+function PrimaryButton({ customClass, text }) {
   return (
     <button
       className={customClass}
-      onClick={handleClick}
       style={{
         borderRadius: '4px',
         padding: '12.5px 15px',

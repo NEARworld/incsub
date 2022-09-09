@@ -1,4 +1,45 @@
+@use './abstracts' as global;
+
 .survey-container {
   width: 1050px;
-  margin: auto;
+  margin: 45px auto auto auto;
+
+  .survey-header {
+    .survey-btn-cancel {
+      width: 25px;
+      aspect-ratio: 1;
+      background-color: #ffffff;
+      border-radius: 4px;
+      border: 1px solid #ededed;
+      margin-right: 20px;
+    }
+    .survey-header-text {
+      font-weight: global.$weight-thick;
+    }
+    .survey-header-hr {
+      margin-top: 30px;
+      border-top: 1px solid #e6e6e6;
+    }
+  }
+  .survey-body {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+
+    .survey-title {
+      margin: 0 auto;
+      text-align: center;
+
+      .survey-title-main {
+        font-weight: global.$weight-thick;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 0.26px;
+      }
+      .survey-title-sub {
+        color: global.$color-secondary;
+        font-size: 15px;
+      }
+    }
+  }
 }

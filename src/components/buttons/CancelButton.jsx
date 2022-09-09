@@ -1,6 +1,16 @@
-function CancelButton({ customClass }) {
+function CancelButton({ customClass, triggers }) {
+  function handleClick() {
+    triggers.setIsSurveyOpen(false);
+    triggers.setIsModalOpen(true);
+  }
   return (
-    <button className={customClass}>
+    <button
+      className={customClass}
+      onClick={handleClick}
+      style={{
+        cursor: 'pointer',
+      }}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="5"

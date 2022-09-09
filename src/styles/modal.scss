@@ -13,9 +13,7 @@ $width-discount-icon: 64px;
 
     .modal-close-btn {
       float: right;
-      &:hover {
-        cursor: pointer;
-      }
+      cursor: pointer;
     }
   }
   .modal-body-container {
@@ -31,13 +29,13 @@ $width-discount-icon: 64px;
       letter-spacing: 0.26px;
       .modal-title {
         font-size: 24px;
-        font-weight: global.$thick-font;
+        font-weight: global.$weight-thick;
         line-height: 40px;
       }
       .modal-content {
         line-height: 30px;
         font-size: 15px;
-        color: #555555;
+        color: global.$color-secondary;
       }
     }
   }
@@ -46,7 +44,7 @@ $width-discount-icon: 64px;
   margin-top: 30px;
   margin-left: 5px;
   .modal-content-item-2-1 {
-    font-weight: global.$thick-font;
+    font-weight: global.$weight-thick;
   }
   .modal-content-control {
     margin-top: 30px;
@@ -57,7 +55,7 @@ $width-discount-icon: 64px;
       }
     }
     .modal-cancel {
-      font-weight: global.$thick-font;
+      font-weight: global.$weight-thick;
       font-size: 13px;
       line-height: 15px;
       color: #286ef1;
@@ -65,9 +63,9 @@ $width-discount-icon: 64px;
       background-color: transparent;
       border: none;
       outline: none;
+      cursor: pointer;
 
       &:hover {
-        cursor: pointer;
         color: #2260d4;
       }
     }

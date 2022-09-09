@@ -1,22 +1,22 @@
-import { useState } from 'react';
 import '../../styles/modal.scss';
 import CloseButton from '../buttons/CloseButton';
 import PrimaryButton from '../buttons/PrimaryButton';
 import DiscountIcon from '../icons/DiscountIcon';
 
-function Modal({ setOpenSurvey }) {
-  const [isOpen, setIsOpen] = useState(true);
+function Modal({ modal, survey }) {
+  const { isModalOpen, setIsModalOpen } = modal;
+  const { setIsSurveyOpen } = survey;
   return (
     <div
       className="modal-wrapper"
       style={{
-        display: isOpen ? 'block' : 'none',
+        display: isModalOpen ? 'block' : 'none',
       }}
     >
       <CloseButton
         customWrapper="modal-close-wrapper"
         customClass="modal-close-btn"
-        setIsOpen={setIsOpen}
+        trigger={setIsModalOpen}
       />
       <div className="modal-body-container">
         <DiscountIcon customWrapper="modal-discount-icon-wrapper" />
@@ -43,10 +43,14 @@ function Modal({ setOpenSurvey }) {
                 <PrimaryButton
                   customClass="modal-btn-primary"
                   text="50 % OFF For 6 Months"
-                  triggers={{ setOpenSurvey, setIsOpen }}
-                  parent="modal"
                 />
-                <button className="modal-cancel">
+                <button
+                  className="modal-cancel"
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    setIsSurveyOpen(true);
+                  }}
+                >
                   No, thanks! I'll cancel
                 </button>
               </div>

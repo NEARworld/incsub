@@ -1,6 +1,6 @@
-function CloseButton({ setIsOpen, customWrapper, customClass }) {
+function CloseButton({ trigger, customWrapper, customClass }) {
   function handleClick() {
-    setIsOpen(false);
+    trigger(false);
   }
   return (
     <div className={`${customWrapper}`} onClick={handleClick}>
