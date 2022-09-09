@@ -1,3 +1,5 @@
+import Reasons from './Reasons';
+
 function Body() {
   return (
     <section className="survey-body">
@@ -7,7 +9,7 @@ function Body() {
           Can you tell us why you want to cancel your membership?
         </p>
       </div>
-      <div className="survey-content"></div>
+      <Reasons />
     </section>
   );
 }
