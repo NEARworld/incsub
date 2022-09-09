@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Modal from '../../components/Modal';
+import Modal from 'Components/Modal';
 import Survey from './Survey';
-import '../../styles/main.scss';
+import 'Styles/main.scss';
 
 function Main() {
   const [isSurveyOpen, setIsSurveyOpen] = useState(false);

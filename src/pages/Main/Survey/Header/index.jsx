@@ -1,4 +1,4 @@
-import CancelButton from '../../../../components/buttons/CancelButton';
+import CancelButton from 'Components/buttons/CancelButton';
 
 function Header({ setIsModalOpen, setIsSurveyOpen }) {
   return (

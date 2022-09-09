@@ -1,4 +1,4 @@
-import '../../../styles/survey.scss';
+import 'Styles/survey.scss';
 import Body from './Body';
 import Header from './Header';
 import Footer from './Footer';

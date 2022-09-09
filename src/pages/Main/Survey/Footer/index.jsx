@@ -1,4 +1,4 @@
-import Warning from '../../../../components/notifications/Warning';
+import Warning from 'Components/notifications/Warning';
 
 function Footer() {
   const content =

@@ -1,5 +1,5 @@
-import WarningIcon from '../icons/WarningIcon';
-import '../../styles/warning.scss';
+import WarningIcon from 'Icons/WarningIcon';
+import 'Styles/warning.scss';
 
 function Warning({ content }) {
   return (

@@ -1,7 +1,7 @@
-import '../../styles/modal.scss';
-import CloseButton from '../buttons/CloseButton';
-import PrimaryButton from '../buttons/PrimaryButton';
-import DiscountIcon from '../icons/DiscountIcon';
+import 'Styles/modal.scss';
+import CloseButton from 'Buttons/CloseButton';
+import PrimaryButton from 'Buttons/PrimaryButton';
+import DiscountIcon from 'Icons/DiscountIcon';
 
 function Modal({ modal, survey }) {
   const { isModalOpen, setIsModalOpen } = modal;

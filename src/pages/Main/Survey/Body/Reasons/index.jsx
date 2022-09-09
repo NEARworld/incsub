@@ -1,10 +1,6 @@
-import { useEffect } from 'react';
-import reasonsData from '../../../../../mocks/reasonsData';
+import reasonsData from 'Mocks/reasonsData';
 
 function Reasons() {
-  useEffect(() => {
-    console.log('rendered Reasons');
-  });
   return (
     <div className="reason-container">
       {reasonsData.map((item) => (
