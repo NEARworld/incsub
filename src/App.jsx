@@ -1,5 +1,12 @@
+import Navigation from './components/Navigation';
+import './App.scss';
+
 function App() {
-  return <div>Hello I am App.jsx</div>;
+  return (
+    <div className="wrapper">
+      <Navigation />
+    </div>
+  );
 }
 
 export default App;
