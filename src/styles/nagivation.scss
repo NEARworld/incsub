@@ -1,6 +1,7 @@
+$color-navbar-bg: #333333;
+
 .navigation-wrapper {
-  border: 1px red solid;
-  font-family: 'Roboto';
-  font-style: normal;
-  height: 16px;
+  background-color: $color-navbar-bg;
+  color: white;
+  height: 60px;
 }

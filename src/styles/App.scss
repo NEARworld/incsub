@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   box-sizing: border-box;
+}
+html,
+body,
+#root,
+.app-wrapper {
+  min-height: 100vh;
 }
 body {
   margin: 0;
   background-color: #f9f9f9;
+  font-family: 'Roboto';
 }
