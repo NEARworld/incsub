@@ -1,0 +1,19 @@
+.warning-container {
+  padding: 15px 20px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 15px;
+  border-radius: 4px;
+  background-color: #feecec;
+
+  .warning-icon-survey {
+    margin-top: 7px;
+  }
+
+  .warning-text {
+    margin: 0;
+    font-size: 15px;
+    line-height: 30px;
+    letter-spacing: 0.26px;
+  }
+}
