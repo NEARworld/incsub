@@ -59,3 +59,12 @@ git clone https://github.com/NEARworld/incsub.git && cd ./incsub && npm install 
 | ------------------- | ------- |
 | eslint              | ^8.23.0 |
 | eslint-plugin-react | ^7.31.7 |
+
+#### ETC
+
+| module       | version |
+| ------------ | ------- |
+| css-loader   | ^6.7.1  |
+| style-loader | ^3.3.1  |
+| sass         | ^1.54.9 |
+| sass-loader  | ^13.0.2 |
