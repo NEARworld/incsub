@@ -1,5 +1,5 @@
+@use '../styles/abstracts/' as global;
 $width-discount-icon: 64px;
-$thick-font: 700;
 
 .modal-wrapper {
   margin: auto;
@@ -31,7 +31,7 @@ $thick-font: 700;
       letter-spacing: 0.26px;
       .modal-title {
         font-size: 24px;
-        font-weight: $thick-font;
+        font-weight: global.$thick-font;
         line-height: 40px;
       }
       .modal-content {
@@ -46,7 +46,7 @@ $thick-font: 700;
   margin-top: 30px;
   margin-left: 5px;
   .modal-content-item-2-1 {
-    font-weight: $thick-font;
+    font-weight: global.$thick-font;
   }
   .modal-content-control {
     margin-top: 30px;
@@ -57,7 +57,7 @@ $thick-font: 700;
       }
     }
     .modal-cancel {
-      font-weight: $thick-font;
+      font-weight: global.$thick-font;
       font-size: 13px;
       line-height: 15px;
       color: #286ef1;
