@@ -23,7 +23,8 @@
   .survey-wrapper {
     background-color: white;
     padding: 0 160px;
-
+    margin-bottom: 140px;
+    border-radius: 10px;
     .survey-body {
       margin-top: 30px;
       padding-top: 60px;
@@ -44,8 +45,24 @@
           font-size: 15px;
         }
       }
+
+      .reason-container {
+        display: grid;
+        gap: 20px;
+        margin-top: 35px;
+        margin-bottom: 30px;
+        .reason-wrapper {
+          width: 730px;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          border: 1px solid #f2f2f2;
+          border-radius: 30px;
+        }
+      }
     }
     footer {
+      padding: 1px;
       .survey-control {
         margin-top: 30px;
         margin-bottom: 30px;
