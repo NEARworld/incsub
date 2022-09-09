@@ -1,6 +1,7 @@
 import '../../../styles/survey.scss';
 import Body from './Body';
 import Header from './Header/index';
+import Footer from './Footer/index';
 
 function Survey({ survey, modal }) {
   const { setIsModalOpen } = modal;
