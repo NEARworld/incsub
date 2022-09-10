@@ -1,14 +1,15 @@
 import CancelButton from 'Components/buttons/CancelButton';
+import styles from 'Styles/survey/header.module.scss';
 
 function Header({ setIsModalOpen, setIsSurveyOpen }) {
   return (
-    <header className="survey-header">
+    <header className={styles.header}>
       <CancelButton
-        customClass="survey-btn-cancel"
+        customClass={styles.btn_cancel}
         triggers={{ setIsModalOpen, setIsSurveyOpen }}
       />
-      <span className="survey-header-text">Cancellation Survey</span>
-      <hr className="survey-header-hr" />
+      <span className={styles.header_text}>Cancellation Survey</span>
+      <hr className={styles.header_hr} />
     </header>
   );
 }
