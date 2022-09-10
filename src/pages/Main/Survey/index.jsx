@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Body from './Body';
 import Header from './Header';
 import Footer from './Footer';
@@ -6,12 +6,15 @@ import styles from 'Styles/survey/survey.module.scss';
 
 function Survey({ survey, modal }) {
   const [checked, setChecked] = useState(0);
+  const radioRef = useRef(null);
+  const detailRef = useRef(null);
   const { setIsModalOpen } = modal;
   const { setIsSurveyOpen } = survey;
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log('submitted');
+    console.log(radioRef.current.id);
+    console.log(detailRef.current.value);
     setIsSurveyOpen(false);
   }
 
@@ -22,8 +25,17 @@ function Survey({ survey, modal }) {
         setIsSurveyOpen={setIsSurveyOpen}
       />
       <div className={styles.wrapper}>
-        <Body checked={checked} setChecked={setChecked} />
-        <Footer checked={checked} />
+        <Body
+          checked={checked}
+          setChecked={setChecked}
+          radioRef={radioRef}
+          detailRef={detailRef}
+        />
+        <Footer
+          checked={checked}
+          setIsModalOpen={setIsModalOpen}
+          setIsSurveyOpen={setIsSurveyOpen}
+        />
       </div>
     </form>
   );

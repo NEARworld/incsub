@@ -2,7 +2,6 @@ import { useState } from 'react';
 
 function PrimaryButton({ parent, customClass, text }) {
   const [hover, setHover] = useState(false);
-
   return (
     <button
       className={customClass}

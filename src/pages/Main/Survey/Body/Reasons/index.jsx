@@ -2,7 +2,7 @@ import reasonsData from 'Mocks/reasonsData';
 import Detail from './Detail';
 import styles from 'Styles/survey/reasons.module.scss';
 
-function Reasons({ checked, setChecked }) {
+function Reasons({ checked, setChecked, radioRef, detailRef }) {
   return (
     <div className={styles.container}>
       {reasonsData.map((item) => (
@@ -19,15 +19,15 @@ function Reasons({ checked, setChecked }) {
               name="reason"
               value={item.data}
               id={item.id}
-              onChange={() => {
-                checked === item.id ? setChecked(0) : setChecked(item.id);
-              }}
-              checked={checked === item.id ? true : false}
+              ref={checked === item.id ? radioRef : undefined}
+              onChange={() => setChecked(item.id)}
             />
             <span className={styles.checkmark}></span>
             <span className={styles.text}>{item.data}</span>
           </label>
-          {checked === item.id ? <Detail checked={checked} /> : null}
+          {checked === item.id ? (
+            <Detail checked={checked} detailRef={detailRef} />
+          ) : null}
         </div>
       ))}
     </div>
