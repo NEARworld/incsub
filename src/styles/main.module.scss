@@ -1,0 +1,6 @@
+$height-navbar: 60px;
+
+.wrapper {
+  display: flex;
+  height: calc(100vh - $height-navbar);
+}
