@@ -1,38 +1,36 @@
 @use '../styles/abstracts/' as global;
 $width-discount-icon: 64px;
 
-.modal-wrapper {
+.wrapper {
   margin: auto;
   width: 700px;
   height: 440px;
   box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.05);
-
-  .modal-close-wrapper {
+  .close_wrapper {
     margin: 30px 30px 0 0;
     height: 14px;
-
-    .modal-close-btn {
-      float: right;
-      cursor: pointer;
-    }
   }
-  .modal-body-container {
+  .close_btn {
+    float: right;
+    cursor: pointer;
+  }
+  .body_container {
     margin: 0 40px;
     display: grid;
     grid-template-columns: $width-discount-icon auto;
     gap: 30px;
 
-    .modal-discount-icon-wrapper {
+    .discount_icon_wrapper {
       margin-top: 14px;
     }
-    .modal-body {
+    .body {
       letter-spacing: 0.26px;
-      .modal-title {
+      .title {
         font-size: 24px;
         font-weight: global.$weight-thick;
         line-height: 40px;
       }
-      .modal-content {
+      .content {
         line-height: 30px;
         font-size: 15px;
         color: global.$color-secondary;
@@ -40,21 +38,15 @@ $width-discount-icon: 64px;
     }
   }
 }
-.modal-content-item-2 {
+.content_item_2 {
   margin-top: 30px;
   margin-left: 5px;
-  .modal-content-item-2-1 {
+  .content_item_2-1 {
     font-weight: global.$weight-thick;
   }
-  .modal-content-control {
+  .content_control {
     margin-top: 30px;
-    .modal-btn-primary {
-      background-color: #286ef1;
-      &:hover {
-        background-color: #2260d4;
-      }
-    }
-    .modal-cancel {
+    .cancel {
       font-weight: global.$weight-thick;
       font-size: 13px;
       line-height: 15px;
