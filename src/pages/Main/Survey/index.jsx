@@ -14,7 +14,7 @@ function Survey({ survey, modal }) {
   function handleSubmit(e) {
     e.preventDefault();
     console.log(radioRef.current.id);
-    console.log(detailRef.current.value);
+    if (detailRef.current) console.log(detailRef.current.value);
     setIsSurveyOpen(false);
   }
 
