@@ -7,6 +7,7 @@ function Detail({ checked }) {
         <textarea
           className={styles.second}
           placeholder="What is the better solution? If you don't mind sharing. Your feedback is much appreaciated!"
+          required
         ></textarea>
       );
     } else if (checked === 4) {

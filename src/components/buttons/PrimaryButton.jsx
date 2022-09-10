@@ -1,19 +1,8 @@
 import { useState } from 'react';
 
-function PrimaryButton({ customClass, text }) {
+function PrimaryButton({ parent, customClass, text }) {
   const [hover, setHover] = useState(false);
-  function makeStyle() {
-    let styles = {};
-    // For survey cancel button
-    if (customClass === 'btn-cancel-membership')
-      styles.backgroundColor = '#F43C3D';
-    // For modal button
-    if (customClass === 'btn_primary') {
-      if (hover) styles.backgroundColor = '#2260d4';
-      else styles.backgroundColor = '#286ef1';
-    }
-    return styles;
-  }
+
   return (
     <button
       className={customClass}
@@ -26,7 +15,6 @@ function PrimaryButton({ customClass, text }) {
         border: 'none',
         outline: 'none',
         cursor: 'pointer',
-        color: 'white',
         ...makeStyle(),
       }}
       onMouseOver={() => setHover(true)}
@@ -35,6 +23,28 @@ function PrimaryButton({ customClass, text }) {
       {text}
     </button>
   );
+
+  function makeStyle() {
+    let styles = {};
+    // For survey cancel button
+    if (parent?.name === 'survey') {
+      styles.color = '#6b6b6b';
+      styles.cursor = 'initial';
+      if (parent?.checked) {
+        styles.cursor = 'pointer';
+        styles.color = 'white';
+        styles.backgroundColor = '#F43C3D';
+        if (hover) styles.backgroundColor = '#de2828';
+      }
+    }
+    // For modal button
+    if (customClass === 'btn_primary') {
+      styles.color = 'white';
+      if (hover) styles.backgroundColor = '#2260d4';
+      else styles.backgroundColor = '#286ef1';
+    }
+    return styles;
+  }
 }
 
 export default PrimaryButton;

@@ -1,22 +1,31 @@
-import styles from 'Styles/survey/survey.module.scss';
+import { useState } from 'react';
 import Body from './Body';
 import Header from './Header';
 import Footer from './Footer';
+import styles from 'Styles/survey/survey.module.scss';
 
 function Survey({ survey, modal }) {
+  const [checked, setChecked] = useState(0);
   const { setIsModalOpen } = modal;
   const { setIsSurveyOpen } = survey;
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log('submitted');
+    setIsSurveyOpen(false);
+  }
+
   return (
-    <div className={styles.container}>
+    <form className={styles.container} onSubmit={handleSubmit}>
       <Header
         setIsModalOpen={setIsModalOpen}
         setIsSurveyOpen={setIsSurveyOpen}
       />
       <div className={styles.wrapper}>
-        <Body />
-        <Footer />
+        <Body checked={checked} setChecked={setChecked} />
+        <Footer checked={checked} />
       </div>
-    </div>
+    </form>
   );
 }
 

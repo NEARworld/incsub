@@ -1,10 +1,8 @@
 import reasonsData from 'Mocks/reasonsData';
-import { useState } from 'react';
 import Detail from './Detail';
 import styles from 'Styles/survey/reasons.module.scss';
 
-function Reasons() {
-  const [checked, setChecked] = useState(0);
+function Reasons({ checked, setChecked }) {
   return (
     <div className={styles.container}>
       {reasonsData.map((item) => (

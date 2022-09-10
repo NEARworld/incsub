@@ -1,7 +1,7 @@
 import styles from 'Styles/survey/survey.module.scss';
 import Reasons from './Reasons';
 
-function Body() {
+function Body({ checked, setChecked }) {
   return (
     <section className={styles.body}>
       <div className={styles.title}>
@@ -10,7 +10,7 @@ function Body() {
           Can you tell us why you want to cancel your membership?
         </p>
       </div>
-      <Reasons />
+      <Reasons checked={checked} setChecked={setChecked} />
     </section>
   );
 }
