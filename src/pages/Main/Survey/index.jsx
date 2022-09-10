@@ -16,7 +16,7 @@ function Survey({ survey, modal }) {
   }
 
   return (
-    <form className={styles.container} onSubmit={handleSubmit}>
+    <form className={styles.container} method="POST" onSubmit={handleSubmit}>
       <Header
         setIsModalOpen={setIsModalOpen}
         setIsSurveyOpen={setIsSurveyOpen}
