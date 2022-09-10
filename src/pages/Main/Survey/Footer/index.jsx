@@ -1,4 +1,6 @@
 import Warning from 'Components/notifications/Warning';
+import PrimaryButton from 'Components/buttons/PrimaryButton';
+import LeftArrowIcon from 'Components/icons/LeftArrowIcon';
 
 function Footer() {
   const content =
@@ -7,8 +9,11 @@ function Footer() {
     <footer>
       <Warning content={content} />
       <div className="survey-control">
-        <button>Back</button>
-        <button>Cancel Membership</button>
+        <LeftArrowIcon />
+        <PrimaryButton
+          customClass="btn-cancel-membership"
+          text="Cancel Membership"
+        />
       </div>
     </footer>
   );

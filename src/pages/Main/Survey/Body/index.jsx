@@ -1,11 +1,12 @@
+import styles from 'Styles/survey/survey.module.scss';
 import Reasons from './Reasons';
 
 function Body() {
   return (
-    <section className="survey-body">
-      <div className="survey-title">
-        <h1 className="survey-title-main">We're sad to see you go...</h1>
-        <p className="survey-title-sub">
+    <section className={styles.body}>
+      <div className={styles.title}>
+        <h1 className={styles.title_main}>We're sad to see you go...</h1>
+        <p className={styles.title_sub}>
           Can you tell us why you want to cancel your membership?
         </p>
       </div>
