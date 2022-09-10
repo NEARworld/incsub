@@ -27,12 +27,14 @@ $size-title: 15px;
     .select_display {
       position: relative;
       width: 100%;
+      cursor: pointer;
       input {
         width: 100%;
         padding: 9px 14px;
         font-size: 15px;
         line-height: 30px;
-
+        border: 1px solid #555555;
+        cursor: pointer;
         &::placeholder {
           opacity: 0;
         }
@@ -44,7 +46,8 @@ $size-title: 15px;
           background-color: white;
           width: auto;
         }
-        &:focus ~ &::placeholder {
+        &:focus,
+        &::placeholder {
           opacity: 1;
         }
       }
@@ -55,14 +58,20 @@ $size-title: 15px;
         top: 50%;
         transform: translateY(-50%);
         transition: 0.3s;
+        cursor: pointer;
       }
-      & > input:hover {
+      &:hover {
         border: 1px solid #286ef1;
+        input {
+          border: 0;
+        }
       }
     }
     select {
       width: 100%;
       font-size: 15px;
+      max-height: 0;
+      transition: 0.3s;
 
       option {
         padding: 21px 0;
