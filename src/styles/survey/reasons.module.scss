@@ -1,0 +1,56 @@
+.container {
+  display: grid;
+  gap: 20px;
+  margin-top: 35px;
+  margin-bottom: 30px;
+  .wrapper {
+    .reason {
+      width: 730px;
+      height: 50px;
+      border: 1px solid #f2f2f2;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      user-select: none;
+      cursor: pointer;
+      // hide input
+      input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      &:hover {
+        border: 1px solid rgb(190, 212, 255);
+      }
+      // show the indicator circle when checked
+      input:checked ~ .checkmark::after {
+        display: block;
+      }
+      // when checked, add blue background
+      input:checked ~ .checkmark {
+        background-color: #286ef1;
+      }
+      .checkmark {
+        width: 20px;
+        height: 20px;
+        margin-left: 20px;
+        border: 1px solid #555555;
+        border-radius: 50%;
+        display: flex;
+        &::after {
+          content: '';
+          display: none;
+          margin: auto;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: white;
+        }
+      }
+      .text {
+        margin-left: 10px;
+      }
+    }
+  }
+}
