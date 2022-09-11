@@ -30,6 +30,7 @@
       // when checked, add blue background
       input:checked ~ .checkmark {
         background-color: #286ef1;
+        border: none;
       }
       .checkmark {
         width: 20px;

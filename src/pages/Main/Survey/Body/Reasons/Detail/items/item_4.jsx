@@ -1,8 +1,13 @@
 import NoticeIcon from 'Icons/NoticeIcon';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { products } from 'Mocks/products';
 
 export default ({ styles, detailRef }) => {
-  const [showSelect, setShowSelect] = useState(false);
+  const [isFocusDisplay, setIsFocusDisplay] = useState(false);
+  const [checkedProducts, setCheckedProducts] = useState([]);
+  useEffect(() => {
+    console.log(isFocusDisplay);
+  });
   return (
     <div id={4} ref={detailRef} className={styles.fourth}>
       <div className={styles.section_1}>
@@ -13,29 +18,91 @@ export default ({ styles, detailRef }) => {
           <NoticeIcon />
         </header>
         <section>
-          <div className={styles.select_display}>
+          <div
+            className={styles.select_display}
+            onClick={() => {
+              console.log('clicked div');
+              setIsFocusDisplay((prevState) => !prevState);
+            }}
+          >
             <input
               type="text"
               readOnly
-              placeholder={showSelect ? `${0} products selected` : ' '}
               id="product"
-              onClick={() => setShowSelect((prevState) => !prevState)}
+              style={{
+                border: isFocusDisplay
+                  ? '1px solid #286ef1'
+                  : '1px solid black',
+              }}
             />
-            <label htmlFor="product">Select Product (s)</label>
+            <label
+              htmlFor="product"
+              style={{
+                top: isFocusDisplay ? 0 : '50%',
+                fontSize: isFocusDisplay ? '0.8rem' : '15px',
+                padding: isFocusDisplay ? '0 7px' : 'initial',
+                color: isFocusDisplay ? '#286ef1' : 'black',
+                backgroundColor: 'white',
+                width: 'auto',
+              }}
+            >
+              Select Product (s)
+            </label>
+            <span
+              style={{
+                position: 'absolute',
+                left: '10px',
+                top: '50%',
+                transform: 'translateY(-50%)',
+                opacity: isFocusDisplay ? 1 : 0,
+              }}
+            >{`${0} products selected`}</span>
           </div>
-          <select
-            name=""
-            id=""
-            multiple
+          <div
+            className={styles.products_container}
             style={{
-              maxHeight: showSelect ? '300px' : 0,
-              opacity: showSelect ? 1 : 0,
+              opacity: isFocusDisplay ? 1 : 0,
+              maxHeight: isFocusDisplay ? '250px' : 0,
             }}
           >
-            <option value="0">Product #1</option>
-            <option value="1">Product #2</option>
-            <option value="2">Product #3</option>
-          </select>
+            <ul className={styles.products_wrapper}>
+              {products.map((product) => (
+                <li
+                  key={product.id}
+                  className={styles.product_wrapper}
+                  style={{
+                    display: isFocusDisplay ? 'block' : 'none',
+                  }}
+                >
+                  <label
+                    htmlFor={product.id}
+                    className={styles.product}
+                    style={{
+                      backgroundColor:
+                        checkedProducts === product.id
+                          ? '#d4e2ff'
+                          : 'transparent',
+                    }}
+                  >
+                    <input
+                      type="checkbox"
+                      id={product.id}
+                      name={`${product.name} #${product.id}`}
+                      onChange={() =>
+                        setCheckedProducts((prevState) => [
+                          ...prevState,
+                          product.id,
+                        ])
+                      }
+                    />
+                    <span
+                      className={styles.name}
+                    >{`${product.name} #${product.id}`}</span>
+                  </label>
+                </li>
+              ))}
+            </ul>
+          </div>
         </section>
       </div>
       <hr />
