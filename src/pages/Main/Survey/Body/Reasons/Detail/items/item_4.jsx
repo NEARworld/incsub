@@ -135,9 +135,10 @@ export default ({ styles, detailRef }) => {
           </button>
           <button
             type="button"
-            onClick={() =>
-              setSubData((prevState) => ({ ...prevState, type: 2 }))
-            }
+            onClick={() => {
+              console.log('clicked');
+              setSubData((prevState) => ({ ...prevState, type: 2 }));
+            }}
             style={{
               backgroundColor: subData.type === 2 ? '#d4e2ff' : 'transparent',
               color: subData.type === 2 ? '#286ef1' : 'initial',

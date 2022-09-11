@@ -1,6 +1,7 @@
 import styles from 'Styles/payload.module.scss';
 
 export default function Payload({ payload }) {
+  console.log(payload);
   function makeTemplate() {
     if (payload['radioId'] === 2) {
       return (
@@ -15,7 +16,7 @@ export default function Payload({ payload }) {
         <div>
           <p>radioId: {payload['radioId']}</p>
           <p>products: {JSON.stringify(payload.subData['products'])}</p>
-          <p>type: {payload['type']}</p>
+          <p>type: {payload.subData['type']}</p>
           <p>text: {payload.subData['text']}</p>
         </div>
       );
