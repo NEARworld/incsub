@@ -15,6 +15,7 @@ export default function Payload({ payload }) {
         <div>
           <p>radioId: {payload['radioId']}</p>
           <p>products: {JSON.stringify(payload.subData['products'])}</p>
+          <p>type: {payload['type']}</p>
           <p>text: {payload.subData['text']}</p>
         </div>
       );
