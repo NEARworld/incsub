@@ -11,7 +11,7 @@ export default ({ styles, detailRef }) => {
     type: null,
     text: '',
   });
-  const [detailPayload, setDetailPayload] = useContext(DetailContext);
+  const [_, setDetailPayload] = useContext(DetailContext);
 
   useEffect(() => {
     setDetailPayload(subData);
