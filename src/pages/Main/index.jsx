@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useState } from 'react';
 import Modal from 'Components/Modal';
 import Survey from './Survey';
 import styles from 'Styles/main.module.scss';
