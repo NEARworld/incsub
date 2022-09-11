@@ -34,10 +34,6 @@ function Survey({ setPayload, survey, modal }) {
     }
   }
 
-  useEffect(() => {
-    console.log('rendered survey');
-  });
-
   return (
     <form className={styles.container} method="POST" onSubmit={handleSubmit}>
       <Header
