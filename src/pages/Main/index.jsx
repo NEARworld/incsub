@@ -12,11 +12,6 @@ function Main() {
   const [detailPayload, setDetailPayload] = useState({});
   const [payload, setPayload] = useState({});
 
-  useEffect(() => {
-    console.log('payload:', payload);
-    console.log('rendered data');
-  });
-
   return (
     <DetailContext.Provider value={[detailPayload, setDetailPayload]}>
       <div className={styles.wrapper}>
