@@ -1,11 +1,33 @@
 import NoticeIcon from 'Icons/NoticeIcon';
-import { useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { products } from 'Mocks/products';
+import { DetailContext } from 'Pages/Main';
 
 export default ({ styles, detailRef }) => {
   const [isFocusDisplay, setIsFocusDisplay] = useState(false);
-  const [checkedProducts, setCheckedProducts] = useState([]);
   const [inputBorder, setInputBorder] = useState('1px solid black');
+  const [subData, setSubData] = useState({
+    products: [],
+    type: null,
+    text: '',
+  });
+  const [detailPayload, setDetailPayload] = useContext(DetailContext);
+
+  useEffect(() => {
+    setDetailPayload(subData);
+  }, [subData]);
+
+  const getCleanedProductList = (prevState, product) => {
+    let checkedProduct = undefined;
+    const cleanedArr = prevState.products.filter((item) => {
+      if (item === product.id) checkedProduct = product.id;
+      return item !== product.id;
+    });
+    return checkedProduct
+      ? { ...prevState, products: cleanedArr }
+      : { ...prevState, products: [...cleanedArr, product.id] };
+  };
+
   return (
     <div id={4} ref={detailRef} className={styles.fourth}>
       <div className={styles.section_1}>
@@ -51,7 +73,7 @@ export default ({ styles, detailRef }) => {
                 transform: 'translateY(-50%)',
                 opacity: isFocusDisplay ? 1 : 0,
               }}
-            >{`${0} products selected`}</span>
+            >{`${subData.length} products selected`}</span>
           </div>
           <div
             className={styles.products_container}
@@ -72,19 +94,15 @@ export default ({ styles, detailRef }) => {
                   <label
                     htmlFor={`product_${product.id}`}
                     className={styles.product}
-                    // style={{
-                    //   backgroundColor:
-                    //     checkedProducts === product.id
-                    //       ? '#d4e2ff'
-                    //       : 'transparent',
-                    // }}
                   >
                     <input
                       type="checkbox"
                       id={`product_${product.id}`}
                       name={`${product.name} #${product.id}`}
                       onChange={() =>
-                        setCheckedProducts([...checkedProducts, product.id])
+                        setSubData((prevState) =>
+                          getCleanedProductList(prevState, product)
+                        )
                       }
                     />
                     <span
@@ -103,8 +121,30 @@ export default ({ styles, detailRef }) => {
           <h1 className={styles.title}>What was it?</h1>
         </header>
         <section>
-          <button type="button">One Major Problem</button>
-          <button type="button">Various things</button>
+          <button
+            type="button"
+            onClick={() =>
+              setSubData((prevState) => ({ ...prevState, type: 1 }))
+            }
+            style={{
+              backgroundColor: subData.type === 1 ? '#d4e2ff' : 'transparent',
+              color: subData.type === 1 ? '#286ef1' : 'initial',
+            }}
+          >
+            One Major Problem
+          </button>
+          <button
+            type="button"
+            onClick={() =>
+              setSubData((prevState) => ({ ...prevState, type: 2 }))
+            }
+            style={{
+              backgroundColor: subData.type === 2 ? '#d4e2ff' : 'transparent',
+              color: subData.type === 2 ? '#286ef1' : 'initial',
+            }}
+          >
+            Various things
+          </button>
         </section>
       </div>
       <hr />
@@ -114,7 +154,15 @@ export default ({ styles, detailRef }) => {
           <NoticeIcon />
         </header>
         <section>
-          <textarea required></textarea>
+          <textarea
+            onChange={(e) =>
+              setSubData((prevState) => ({
+                ...prevState,
+                text: e.target.value,
+              }))
+            }
+            required
+          ></textarea>
         </section>
       </div>
       <hr />

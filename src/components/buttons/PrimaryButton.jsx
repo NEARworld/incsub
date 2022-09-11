@@ -26,10 +26,10 @@ function PrimaryButton({ parent, customClass, text }) {
 
   function makeStyle() {
     let styles = {};
-    // For survey cancel button
+    // Activate a cancel button in the survey page
     if (parent?.name === 'survey') {
-      styles.color = '#6b6b6b';
-      styles.cursor = 'initial';
+      styles.color = '#6b6b6b'; // set gray color to cancel button
+      styles.cursor = 'initial'; // no cursor change becuz it's disabled by default
       if (parent?.checked) {
         // When opening the survey page, initially no radio is checked
         // Thus, 'else' will be executed by default and add click event to button
