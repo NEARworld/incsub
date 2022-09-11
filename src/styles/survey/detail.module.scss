@@ -33,13 +33,13 @@ $size-title: 15px;
         padding: 9px 14px;
         font-size: 15px;
         line-height: 30px;
-        border: 1px solid #555555;
         cursor: pointer;
       }
       input:focus {
         border: 1px solid #286ef1;
         outline: none;
       }
+
       label {
         width: 100%;
         position: absolute;
@@ -48,9 +48,6 @@ $size-title: 15px;
         transform: translateY(-50%);
         transition: 0.3s;
         cursor: pointer;
-      }
-      &:hover {
-        border: 1px solid #286ef1;
       }
     }
     .products_container {

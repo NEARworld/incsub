@@ -5,8 +5,11 @@ import { products } from 'Mocks/products';
 export default ({ styles, detailRef }) => {
   const [isFocusDisplay, setIsFocusDisplay] = useState(false);
   const [checkedProducts, setCheckedProducts] = useState([]);
+  const [inputBorder, setInputBorder] = useState('1px solid black');
   useEffect(() => {
     console.log(isFocusDisplay);
+    console.log(checkedProducts);
+    console.log(inputBorder);
   });
   return (
     <div id={4} ref={detailRef} className={styles.fourth}>
@@ -20,20 +23,17 @@ export default ({ styles, detailRef }) => {
         <section>
           <div
             className={styles.select_display}
-            onClick={() => {
-              console.log('clicked div');
-              setIsFocusDisplay((prevState) => !prevState);
-            }}
+            onClick={() => setIsFocusDisplay((prevState) => !prevState)}
           >
             <input
               type="text"
               readOnly
               id="product"
               style={{
-                border: isFocusDisplay
-                  ? '1px solid #286ef1'
-                  : '1px solid black',
+                border: isFocusDisplay ? '1px solid #286ef1' : inputBorder,
               }}
+              onMouseOver={() => setInputBorder('1px solid #286ef1')}
+              onMouseLeave={() => setInputBorder('1px solid black')}
             />
             <label
               htmlFor="product"
@@ -77,22 +77,19 @@ export default ({ styles, detailRef }) => {
                   <label
                     htmlFor={product.id}
                     className={styles.product}
-                    style={{
-                      backgroundColor:
-                        checkedProducts === product.id
-                          ? '#d4e2ff'
-                          : 'transparent',
-                    }}
+                    // style={{
+                    //   backgroundColor:
+                    //     checkedProducts === product.id
+                    //       ? '#d4e2ff'
+                    //       : 'transparent',
+                    // }}
                   >
                     <input
                       type="checkbox"
-                      id={product.id}
+                      id={`product_${product.id}`}
                       name={`${product.name} #${product.id}`}
                       onChange={() =>
-                        setCheckedProducts((prevState) => [
-                          ...prevState,
-                          product.id,
-                        ])
+                        setCheckedProducts([...checkedProducts, product.id])
                       }
                     />
                     <span
