@@ -1,16 +1,11 @@
 import NoticeIcon from 'Icons/NoticeIcon';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { products } from 'Mocks/products';
 
 export default ({ styles, detailRef }) => {
   const [isFocusDisplay, setIsFocusDisplay] = useState(false);
   const [checkedProducts, setCheckedProducts] = useState([]);
   const [inputBorder, setInputBorder] = useState('1px solid black');
-  useEffect(() => {
-    console.log(isFocusDisplay);
-    console.log(checkedProducts);
-    console.log(inputBorder);
-  });
   return (
     <div id={4} ref={detailRef} className={styles.fourth}>
       <div className={styles.section_1}>
@@ -75,7 +70,7 @@ export default ({ styles, detailRef }) => {
                   }}
                 >
                   <label
-                    htmlFor={product.id}
+                    htmlFor={`product_${product.id}`}
                     className={styles.product}
                     // style={{
                     //   backgroundColor:
