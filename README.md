@@ -14,6 +14,8 @@
 
 #### Project URL: https://grand-capybara-7c2aa0.netlify.app/
 
+#### Project Figma Flow Chart: https://www.figma.com/file/rqrbOzLdTPAbJnsafp1CEC/Incsub?node-id=0%3A1
+
 ---
 
 ### How to run the project quickly
