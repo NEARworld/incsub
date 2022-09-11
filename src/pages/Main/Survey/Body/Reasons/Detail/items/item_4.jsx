@@ -73,7 +73,7 @@ export default ({ styles, detailRef }) => {
                 transform: 'translateY(-50%)',
                 opacity: isFocusDisplay ? 1 : 0,
               }}
-            >{`${subData.length} products selected`}</span>
+            >{`${subData.products.length} products selected`}</span>
           </div>
           <div
             className={styles.products_container}
