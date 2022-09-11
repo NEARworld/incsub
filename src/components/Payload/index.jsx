@@ -23,7 +23,7 @@ export default function Payload({ payload }) {
 
   return (
     <div className={styles.wrapper}>
-      <h1>✅ Request Paylod</h1>
+      <h1>✅ Request Payload</h1>
       {makeTemplate()}
     </div>
   );
