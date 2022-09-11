@@ -18,7 +18,7 @@
 
 #### Project Figma Flow Chart: https://www.figma.com/file/rqrbOzLdTPAbJnsafp1CEC/Incsub?node-id=0%3A1
 
-![image](https://user-images.githubusercontent.com/102969108/189530723-d7d93df4-0e6f-4021-93fe-36756ca32ce4.png)
+![image](https://user-images.githubusercontent.com/102969108/189530823-b186eef2-5694-4260-bcec-2cdbee4b1b42.png)
 
 ---
 
