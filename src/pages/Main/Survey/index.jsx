@@ -7,7 +7,7 @@ import { DetailContext } from 'Pages/Main';
 
 function Survey({ setPayload, survey, modal }) {
   const [checked, setChecked] = useState(0);
-  const [detailPayload, setDetailPayload] = useContext(DetailContext);
+  const [detailPayload, _] = useContext(DetailContext);
   const detailRef = useRef(null);
   const radioRef = useRef(null);
   const { setIsModalOpen } = modal;
