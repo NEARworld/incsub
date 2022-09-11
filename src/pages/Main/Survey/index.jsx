@@ -5,7 +5,7 @@ import Footer from './Footer';
 import styles from 'Styles/survey/survey.module.scss';
 import { DetailContext } from 'Pages/Main';
 
-function Survey({ payload, setPayload, survey, modal }) {
+function Survey({ setPayload, survey, modal }) {
   const [checked, setChecked] = useState(0);
   const [detailPayload, setDetailPayload] = useContext(DetailContext);
   const detailRef = useRef(null);
