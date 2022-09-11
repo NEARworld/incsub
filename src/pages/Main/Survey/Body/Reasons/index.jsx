@@ -1,12 +1,8 @@
 import reasonsData from 'Mocks/reasonsData';
 import Detail from './Detail';
 import styles from 'Styles/survey/reasons.module.scss';
-import { useEffect } from 'react';
 
 function Reasons({ checked, setChecked, radioRef, detailRef }) {
-  useEffect(() => {
-    console.log('Reasons', checked);
-  });
   return (
     <div className={styles.container}>
       {reasonsData.map((item) => (
