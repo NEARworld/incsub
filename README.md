@@ -27,7 +27,7 @@
 #### copy and paste the following command in the terminal
 
 ```
-git clone https://github.com/NEARworld/incsub.git && cd ./incsub && npm install && npm run build && npm run dev
+git clone https://github.com/NEARworld/incsub.git && cd ./incsub && npm install && npm run dev
 ```
 
 ---
