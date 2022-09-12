@@ -6,7 +6,6 @@
 
   .wrapper {
     background-color: white;
-    padding: 0 160px;
     margin-bottom: 140px;
     border-radius: 10px;
     .body {
@@ -34,12 +33,18 @@
 }
 
 @media (min-width: 320px) {
+  .wrapper {
+    padding: 0;
+  }
 }
 @media (min-width: 481px) {
 }
 @media (min-width: 641px) {
 }
 @media (min-width: 961px) {
+  .wrapper {
+    padding: 0 160px;
+  }
 }
 @media (min-width: 1025px) {
   /* big landscape tablets, laptops, and desktops */
