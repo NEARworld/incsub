@@ -80,19 +80,20 @@ $width-discount-icon: 64px;
   }
   .content_control {
     text-align: center;
-
+    // border: 1px red solid;
+    display: grid;
     .cancel {
       margin-top: 20px;
-      margin-left: 0;
+      border: 1px red solid;
     }
   }
 }
 @media (min-width: 481px) {
   .content_control {
     text-align: initial;
-
+    display: block;
     .cancel {
-      margin-left: 20px;
+      margin-left: 10px;
     }
   }
 }
