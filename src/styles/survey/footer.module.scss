@@ -28,3 +28,24 @@ footer {
     }
   }
 }
+
+@media (min-width: 320px) {
+  .control {
+    padding: 0 10px;
+  }
+}
+@media (min-width: 481px) {
+}
+@media (min-width: 641px) {
+}
+@media (min-width: 961px) {
+  .control {
+    padding: 0;
+  }
+}
+@media (min-width: 1070px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+}
