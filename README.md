@@ -1,5 +1,3 @@
-## Task 1
-
 ### Title
 
 **Cancellation Survey**
@@ -10,11 +8,9 @@
 
 #### NEARworld
 
-#### Email: artemismars2@outlook.com
-
 #### Project URL: https://grand-capybara-7c2aa0.netlify.app/
 
-![image](https://user-images.githubusercontent.com/102969108/189530685-300b44d6-80ad-4d90-ba39-9520c85328fb.png)
+![image](https://i.imgur.com/i20gM0i.gif)
 
 #### Project Figma Flow Chart: https://www.figma.com/file/rqrbOzLdTPAbJnsafp1CEC/Incsub?node-id=0%3A1
 
